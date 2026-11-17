@@ -47,3 +47,20 @@
     io.observe(el);
   });
 })();
+
+// Menu do celular/tablet
+(function () {
+  var btn = document.querySelector('.menu-btn'), menu = document.getElementById('menu-mobile');
+  if (!btn || !menu) return;
+  var use = btn.querySelector('use');
+  function set(open) {
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    use.setAttribute('href', open ? '#i-close' : '#i-burger');
+    if (open) { menu.hidden = false; requestAnimationFrame(function () { menu.classList.add('open'); }); }
+    else { menu.classList.remove('open'); setTimeout(function () { if (!menu.classList.contains('open')) menu.hidden = true; }, 350); }
+  }
+  btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();

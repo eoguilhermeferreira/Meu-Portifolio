@@ -100,6 +100,34 @@ ul, ol { list-style: none; }
 .nav a:hover { color: var(--off); }
 .nav a:hover::after { right: 0; }
 
+.menu-btn {
+  display: none;
+  width: 44px; height: 44px; place-items: center;
+  background: transparent; color: var(--off);
+  border: 1px solid var(--off); border-radius: 2px;
+  font-size: 22px; cursor: pointer;
+}
+.menu-mobile {
+  position: fixed; z-index: 49;
+  top: 0; left: 0; right: 0;
+  padding: 84px var(--gutter) 28px;
+  background: rgba(11, 11, 11, .96);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--wine);
+  display: flex; flex-direction: column;
+  transform: translateY(-12px); opacity: 0;
+  transition: transform .35s var(--ease), opacity .35s var(--ease);
+}
+.menu-mobile.open { transform: none; opacity: 1; }
+.menu-mobile a {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--f-display); font-size: 34px; line-height: 1.1; text-transform: uppercase;
+  color: var(--off);
+}
+.menu-mobile a span { font-size: 14px; color: var(--wine); letter-spacing: .1em; }
+
 /* ---------- Botões (sempre off-white) ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
@@ -345,8 +373,13 @@ ul, ol { list-style: none; }
 }
 
 /* Notebook (moldura em CSS com o print real do site) */
+.devices {
+  position: relative;
+  width: 84%;
+  margin-right: 7%;
+}
 .laptop {
-  width: 88%;
+  width: 100%;
   transition: transform .6s var(--ease);
   filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .6));
 }
@@ -389,7 +422,25 @@ ul, ol { list-style: none; }
 }
 .project-link .ic { transition: transform .35s var(--ease); }
 .project:hover { transform: translateY(-6px); border-color: var(--wine); box-shadow: 0 28px 50px -28px rgba(107, 30, 35, .9); }
-.project:hover .laptop { transform: translateY(-4px) scale(1.035); }
+.phone {
+  position: absolute; z-index: 2;
+  right: -9%; bottom: -3%;
+  width: 21%;
+  aspect-ratio: 360 / 613;
+  padding: 3px;
+  background: linear-gradient(160deg, #3a3436, #141213);
+  border: 1px solid #4a4244;
+  border-radius: 14px;
+  box-shadow: 0 16px 26px -8px rgba(0, 0, 0, .85), -6px 0 18px -6px rgba(0, 0, 0, .6);
+  transition: transform .6s var(--ease);
+}
+.phone img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top center;
+  border-radius: 11px;
+  background: #1a1718;
+}
+.project:hover .laptop { transform: translateY(-4px) scale(1.03); }
+.project:hover .phone { transform: translateY(-10px); }
 .project:hover .project-link .ic { transform: translateX(5px); }
 
 .own { margin-top: 48px; }
@@ -468,7 +519,7 @@ ul, ol { list-style: none; }
 .about-photo {
   position: relative;
   border-right: 1px solid var(--line);
-  min-height: 520px;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: var(--wine-dark);
 }
@@ -512,7 +563,7 @@ ul, ol { list-style: none; }
 .contact-list li { border-bottom: 1px solid var(--line); }
 .contact-list li:first-child { border-top: 1px solid var(--line); }
 .contact-list a, .contact-list li > div {
-  display: grid; grid-template-columns: 44px 100px minmax(0, 1fr); align-items: center; gap: 14px;
+  display: grid; grid-template-columns: 44px 170px minmax(0, 1fr); align-items: center; gap: 14px;
   padding: 16px 4px;
   transition: background .3s, padding .3s var(--ease);
 }
@@ -573,6 +624,7 @@ ul, ol { list-style: none; }
   .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav { display: none; }
+  .menu-btn { display: grid; }
 }
 
 @media (max-width: 1024px) {
@@ -620,13 +672,22 @@ ul, ol { list-style: none; }
   .hero-stats strong { font-size: 40px; min-width: 0; }
   .hero-stats span { font-size: 10px; letter-spacing: .14em; }
 
-  .about { grid-template-columns: 1fr; }
-  .about-photo { min-height: 0; aspect-ratio: 4 / 5; border-right: 0; border-bottom: 1px solid var(--line); }
-  .about-photo::after { background: linear-gradient(180deg, transparent 70%, rgba(44, 15, 18, .7)); }
+  .about { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+  .about-body { padding: 28px 24px; }
 }
 
 @media (max-width: 640px) {
-  .services, .projects, .own-grid { grid-template-columns: 1fr; }
+  .projects, .own-grid { grid-template-columns: 1fr; }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .service { padding: 20px 16px 22px; }
+  .service .ic-lg { width: 32px; height: 32px; }
+  .service-n { top: 16px; right: 14px; font-size: 12px; }
+  .service h3 { margin-top: 18px; font-size: 20px; }
+  .service p { font-size: 13px; }
+  .about { grid-template-columns: 1fr; }
+  .about-photo { border-right: 0; border-bottom: 1px solid var(--line); }
+  .about-photo::after { background: linear-gradient(180deg, transparent 75%, rgba(44, 15, 18, .7)); }
+  .about-body { padding: 32px 22px; }
   .section-head { gap: 14px; }
   .head-note { display: none; }
   .title { white-space: normal; }
