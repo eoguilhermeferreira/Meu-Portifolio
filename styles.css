@@ -336,46 +336,56 @@ ul, ol { list-style: none; }
 }
 .preview {
   position: relative;
-  aspect-ratio: 16 / 10;
-  display: flex; align-items: flex-end;
-  padding: 20px 22px;
+  aspect-ratio: 16 / 11;
+  display: flex; align-items: center; justify-content: center;
+  padding: 34px 22px 18px;
   background:
-    radial-gradient(ellipse 80% 90% at 85% 10%, rgba(107, 30, 35, .5), transparent 60%),
+    radial-gradient(ellipse 70% 65% at 50% 60%, rgba(107, 30, 35, .55), transparent 70%),
     linear-gradient(180deg, #120c0d, var(--black));
   border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
-.preview::before {                  /* barra de navegador minimalista */
-  content: "";
-  position: absolute; top: 14px; left: 18px;
-  width: 34px; height: 6px;
-  background:
-    radial-gradient(circle at 3px 3px, var(--wine) 2.6px, transparent 3px) 0 0 / 12px 6px repeat-x;
-}
-.preview::after {                   /* linhas finas de grade */
-  content: ""; position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(107, 30, 35, .16) 1px, transparent 1px);
-  background-size: 100% 28px;
-  -webkit-mask-image: linear-gradient(180deg, transparent 15%, #000 100%);
-  mask-image: linear-gradient(180deg, transparent 15%, #000 100%);
-  pointer-events: none;
-}
 .preview-tag {
-  position: absolute; top: 10px; right: 16px;
+  position: absolute; top: 10px; right: 14px; z-index: 2;
   font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gray);
   border: 1px solid var(--line); border-radius: 100px; padding: 3px 10px;
+  background: rgba(11, 11, 11, .6);
 }
-.preview-name {
-  position: relative; z-index: 1;
-  font-family: var(--f-display);
-  font-size: clamp(38px, 3.8vw, 54px);
-  line-height: .92;
-  text-transform: uppercase;
-  color: var(--off);
-  transition: transform .6s var(--ease), letter-spacing .6s var(--ease);
-  transform-origin: left bottom;
+
+/* Notebook (moldura em CSS com o print real do site) */
+.laptop {
+  width: 88%;
+  transition: transform .6s var(--ease);
+  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .6));
 }
-.preview-name em { font-style: normal; color: var(--wine); }
+.laptop-screen {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  padding: 2.6% 2.6% 3%;
+  background: linear-gradient(180deg, #232022, #141213);
+  border: 1px solid #3a3436;
+  border-radius: 10px 10px 2px 2px;
+}
+.laptop-screen::before {           /* câmera */
+  content: ""; position: absolute; top: 1.1%; left: 50%; width: 4px; height: 4px; margin-left: -2px;
+  border-radius: 50%; background: #3d3739;
+}
+.laptop-screen img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top center;
+  border-radius: 2px;
+  background: #1a1718;
+}
+.laptop-base {
+  position: relative;
+  width: 114%; margin-left: -7%;
+  height: 0; padding-bottom: 3.4%;
+  background: linear-gradient(180deg, #3a3436 0%, #1d1a1b 55%, #0f0d0e 100%);
+  border-radius: 1px 1px 12px 12px / 1px 1px 60% 60%;
+}
+.laptop-base::before {             /* entalhe de abertura */
+  content: ""; position: absolute; top: 0; left: 50%; width: 16%; margin-left: -8%; height: 38%;
+  background: #141213; border-radius: 0 0 6px 6px;
+}
 .project-info { display: flex; gap: 16px; padding: 20px 22px 6px; flex: 1; }
 .project-n { font-family: var(--f-display); font-size: 34px; line-height: 1; color: var(--wine); }
 .project h3 { font-family: var(--f-display); font-weight: 400; font-size: 20px; letter-spacing: .03em; text-transform: uppercase; line-height: 1.15; }
@@ -387,7 +397,7 @@ ul, ol { list-style: none; }
 }
 .project-link .ic { transition: transform .35s var(--ease); }
 .project:hover { transform: translateY(-6px); border-color: var(--wine); box-shadow: 0 28px 50px -28px rgba(107, 30, 35, .9); }
-.project:hover .preview-name { transform: scale(1.04); letter-spacing: .015em; }
+.project:hover .laptop { transform: translateY(-4px) scale(1.035); }
 .project:hover .project-link .ic { transform: translateX(5px); }
 
 .own { margin-top: 48px; }
@@ -593,7 +603,6 @@ ul, ol { list-style: none; }
   .about { grid-template-columns: 1fr; }
   .about-photo { min-height: 0; padding-top: 28px; border-right: 0; border-bottom: 1px solid var(--line); }
   .about-photo img { width: min(78%, 340px); }
-  .preview { aspect-ratio: 16 / 8; }
 }
 
 @media (max-width: 640px) {
