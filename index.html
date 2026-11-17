@@ -57,9 +57,11 @@
     <a href="#inicio" class="brand" aria-label="Guilherme Ferreira — início">GF<span>.</span></a>
     <nav class="nav" aria-label="Navegação principal">
       <a href="#servicos">Serviços</a>
+      <a href="#produtos">Produtos</a>
       <a href="#projetos">Projetos</a>
       <a href="#processo">Processo</a>
       <a href="#sobre">Sobre</a>
+      <a href="#nodex">NODEX</a>
       <a href="#contato">Contato</a>
     </nav>
     <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
@@ -68,10 +70,12 @@
   </header>
   <nav class="menu-mobile" id="menu-mobile" aria-label="Menu" hidden>
     <a href="#servicos"><span>01</span>Serviços</a>
-    <a href="#projetos"><span>02</span>Projetos</a>
-    <a href="#processo"><span>03</span>Processo</a>
-    <a href="#sobre"><span>04</span>Sobre</a>
-    <a href="#contato"><span>05</span>Contato</a>
+    <a href="#produtos"><span>02</span>Produtos</a>
+    <a href="#projetos"><span>03</span>Projetos</a>
+    <a href="#processo"><span>04</span>Processo</a>
+    <a href="#sobre"><span>05</span>Sobre</a>
+    <a href="#nodex"><span>06</span>NODEX</a>
+    <a href="#contato"><span>07</span>Contato</a>
   </nav>
 
   <main>
@@ -103,7 +107,7 @@
       </div>
 
       <ul class="hero-stats" aria-label="Números">
-        <li><strong>9</strong><span>projetos<br>no ar</span></li>
+        <li><strong>10</strong><span>projetos<br>no ar</span></li>
         <li><strong>7</strong><span>clientes<br>atendidos</span></li>
         <li><strong>100%</strong><span>trabalho<br>remoto</span></li>
       </ul>
@@ -168,26 +172,60 @@
     </section>
 
     <!-- ================= PROJETOS ================= -->
+    <!-- ================= PRODUTOS NODEX ================= -->
+    <section class="section" id="produtos">
+      <div class="section-head reveal">
+        <h2 class="title">Produtos NODEX</h2>
+        <span class="rule"></span>
+        <span class="head-note">Criados por nós</span>
+      </div>
+      <p class="section-lead reveal">Além dos projetos para clientes, a NODEX cria e mantém produtos próprios.</p>
+      <div class="products">
+        <article class="product reveal">
+          <div class="product-shot"><img src="/assets/produtos/foodnex.webp" alt="Tela inicial do FoodNex" width="1120" height="490" loading="lazy" decoding="async"><span class="status status-live"><span class="status-dot"></span>No ar</span></div>
+          <div class="product-body">
+            <p class="product-cat">SaaS para restaurantes</p>
+            <h3>FoodNex</h3>
+            <p class="product-desc">Sistema completo para restaurantes. O cliente faz o pedido pelo cardápio digital e acompanha cada etapa pelo celular; o restaurante gerencia cozinha, mesas, retiradas e entregas num só painel.</p>
+            <ul class="product-feats"><li>Cardápio digital com link e QR code</li><li>Painel da cozinha e gestão de mesas</li><li>Teste grátis de 7 dias</li></ul>
+            <a class="product-link" href="https://foodnex-app.vercel.app" target="_blank" rel="noopener">Conhecer o FoodNex <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="product reveal">
+          <div class="product-shot"><img src="/assets/produtos/chatnex.webp" alt="Tela inicial do ChatNex" width="1120" height="490" loading="lazy" decoding="async"><span class="status status-live"><span class="status-dot"></span>No ar</span></div>
+          <div class="product-body">
+            <p class="product-cat">Atendimento com IA no WhatsApp</p>
+            <h3>ChatNex</h3>
+            <p class="product-desc">A IA responde os clientes no WhatsApp a qualquer hora, usando os produtos, preços e regras do negócio, e avisa o dono quando a conversa precisa de uma pessoa.</p>
+            <ul class="product-feats"><li>Conexão do WhatsApp por QR code</li><li>Chat ao vivo e painel de métricas</li><li>IA configurável pelo próprio cliente</li></ul>
+            <a class="product-link" href="https://chatnex-ia.vercel.app" target="_blank" rel="noopener">Conhecer o ChatNex <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="product reveal">
+          <div class="product-shot"><img src="/assets/produtos/zack.webp" alt="Tela inicial do Zack Finance" width="1120" height="490" loading="lazy" decoding="async"><span class="status status-dev"><span class="status-dot"></span>Em desenvolvimento</span></div>
+          <div class="product-body">
+            <p class="product-cat">App de finanças pessoais</p>
+            <h3>Zack Finance</h3>
+            <p class="product-desc">Controle financeiro pessoal: receitas, despesas e carteira de investimentos em um único lugar, com o Zack AI, um assistente financeiro integrado ao app.</p>
+            <ul class="product-feats"><li>Receitas e despesas</li><li>Carteira de investimentos</li><li>Assistente Zack AI</li></ul>
+            <span class="product-link is-off">Em breve</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="projetos">
       <div class="section-head reveal">
-        <h2 class="title">Projetos em destaque</h2>
+        <h2 class="title">Projetos de clientes</h2>
         <span class="rule"></span>
-        <span class="head-note">9 projetos no ar</span>
+        <span class="head-note">8 projetos no ar</span>
       </div>
 
       <div class="projects">
-        <a class="project reveal" href="https://foodnex-app.vercel.app" target="_blank" rel="noopener">
-          <div class="preview"><span class="preview-tag">Sistema</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/foodnex.webp" alt="Tela inicial do projeto FoodNex" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/foodnex-mobile.webp" alt="Versão para celular do projeto FoodNex" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
-          <div class="project-info">
-            <span class="project-n">01</span>
-            <div><h3>FoodNex</h3><p>Sistema de pedidos e cardápio digital para restaurantes.</p></div>
-          </div>
-          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
-        </a>
         <a class="project reveal" href="https://pousadacabanaavare.com.br" target="_blank" rel="noopener">
           <div class="preview"><span class="preview-tag">Site + sistema</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/pousada.webp" alt="Tela inicial do projeto Pousada Cabana" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/pousada-mobile.webp" alt="Versão para celular do projeto Pousada Cabana" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
           <div class="project-info">
-            <span class="project-n">02</span>
+            <span class="project-n">01</span>
             <div><h3>Pousada Cabana</h3><p>Site e sistema de gestão.</p></div>
           </div>
           <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
@@ -195,7 +233,7 @@
         <a class="project reveal" href="https://www.cardapiozacota.com.br" target="_blank" rel="noopener">
           <div class="preview"><span class="preview-tag">Cardápio digital</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/zacota-cardapio.webp" alt="Tela inicial do projeto Restaurante Zacota" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/zacota-cardapio-mobile.webp" alt="Versão para celular do projeto Restaurante Zacota" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
           <div class="project-info">
-            <span class="project-n">03</span>
+            <span class="project-n">02</span>
             <div><h3>Restaurante Zacota</h3><p>Cardápio digital.</p></div>
           </div>
           <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
@@ -203,7 +241,7 @@
         <a class="project reveal" href="https://www.restaurantezacota.com.br" target="_blank" rel="noopener">
           <div class="preview"><span class="preview-tag">Site</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/zacota-site.webp" alt="Tela inicial do projeto Restaurante Zacota" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/zacota-site-mobile.webp" alt="Versão para celular do projeto Restaurante Zacota" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
           <div class="project-info">
-            <span class="project-n">04</span>
+            <span class="project-n">03</span>
             <div><h3>Restaurante Zacota</h3><p>Site.</p></div>
           </div>
           <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
@@ -211,7 +249,7 @@
         <a class="project reveal" href="https://advocacia-joao-silvestre.vercel.app" target="_blank" rel="noopener">
           <div class="preview"><span class="preview-tag">Site institucional</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/advocacia.webp" alt="Tela inicial do projeto Advocacia João Silvestre" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/advocacia-mobile.webp" alt="Versão para celular do projeto Advocacia João Silvestre" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
           <div class="project-info">
-            <span class="project-n">05</span>
+            <span class="project-n">04</span>
             <div><h3>Advocacia João Silvestre</h3><p>Site institucional.</p></div>
           </div>
           <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
@@ -219,7 +257,7 @@
         <a class="project reveal" href="https://www.lojasantafeavare.com.br" target="_blank" rel="noopener">
           <div class="preview"><span class="preview-tag">Loja virtual</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/santafe.webp" alt="Tela inicial do projeto Loja Santa Fé Avaré" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/santafe-mobile.webp" alt="Versão para celular do projeto Loja Santa Fé Avaré" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
           <div class="project-info">
-            <span class="project-n">06</span>
+            <span class="project-n">05</span>
             <div><h3>Loja Santa Fé Avaré</h3><p>Loja virtual.</p></div>
           </div>
           <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
@@ -227,7 +265,7 @@
         <a class="project reveal" href="https://www.brubellysboutiqueinfantil.com.br" target="_blank" rel="noopener">
           <div class="preview"><span class="preview-tag">Loja virtual</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/brubellys.webp" alt="Tela inicial do projeto Brubellys Boutique Infantil" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/brubellys-mobile.webp" alt="Versão para celular do projeto Brubellys Boutique Infantil" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
           <div class="project-info">
-            <span class="project-n">07</span>
+            <span class="project-n">06</span>
             <div><h3>Brubellys Boutique Infantil</h3><p>Loja virtual.</p></div>
           </div>
           <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
@@ -235,7 +273,7 @@
         <a class="project reveal" href="https://www.caramelladakidsavare.com.br" target="_blank" rel="noopener">
           <div class="preview"><span class="preview-tag">Loja virtual</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/caramellada.webp" alt="Tela inicial do projeto Caramellada Kids Avaré" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/caramellada-mobile.webp" alt="Versão para celular do projeto Caramellada Kids Avaré" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
           <div class="project-info">
-            <span class="project-n">08</span>
+            <span class="project-n">07</span>
             <div><h3>Caramellada Kids Avaré</h3><p>Loja virtual.</p></div>
           </div>
           <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
@@ -243,26 +281,13 @@
         <a class="project reveal" href="https://www.mfimportsavare.com.br" target="_blank" rel="noopener">
           <div class="preview"><span class="preview-tag">Loja virtual</span><div class="devices"><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/mfimports.webp" alt="Tela inicial do projeto MF Imports Avaré" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div><div class="phone"><img src="/assets/projetos/mfimports-mobile.webp" alt="Versão para celular do projeto MF Imports Avaré" width="360" height="613" loading="lazy" decoding="async"></div></div></div>
           <div class="project-info">
-            <span class="project-n">09</span>
+            <span class="project-n">08</span>
             <div><h3>MF Imports Avaré</h3><p>Loja virtual.</p></div>
           </div>
           <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
         </a>
       </div>
 
-      <div class="own reveal">
-        <p class="own-label"><svg class="ic star"><use href="#i-star"/></svg>Projetos próprios</p>
-        <div class="own-grid">
-          <article class="own-card">
-            <span class="own-name">ChatNex</span>
-            <p>Chatbot com IA integrado ao WhatsApp.</p>
-          </article>
-          <article class="own-card">
-            <span class="own-name">Zack Finance <small>Em testes</small></span>
-            <p>App de controle financeiro pessoal.</p>
-          </article>
-        </div>
-      </div>
     </section>
 
     <!-- ================= PROCESSO + FERRAMENTAS ================= -->
@@ -308,6 +333,27 @@
             <li><svg class="ic"><use href="#i-pin"/></svg>Avaré, SP — Brasil</li>
             <li><svg class="ic"><use href="#i-star"/></svg>Fundador da NODEX</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AGÊNCIA NODEX ================= -->
+    <section class="section" id="nodex">
+      <div class="agency reveal">
+        <div class="agency-logo">
+          <span class="agency-wordmark">NODEX</span>
+          <span class="agency-sub">Agência de marketing digital</span>
+        </div>
+        <div class="agency-body">
+          <p class="agency-kicker"><svg class="ic star"><use href="#i-star"/></svg>A agência</p>
+          <h2 class="title">Começou com um sonho</h2>
+          <span class="rule short"></span>
+          <p class="agency-lead">Eu sempre quis ter a minha própria empresa.</p>
+          <p>Trabalhava no regime CLT e decidi arriscar no digital. Saí, comecei a criar com IA e montei a NODEX. Hoje a agência faz sites, lojas virtuais e sistemas para clientes, e também cria produtos próprios, como o FoodNex, o ChatNex e o Zack Finance.</p>
+          <div class="agency-actions">
+            <a class="btn btn-solid" href="https://wa.me/5511923999249" target="_blank" rel="noopener">WhatsApp da NODEX <svg class="ic"><use href="#i-whats"/></svg></a>
+            <a class="btn btn-ghost" href="https://www.instagram.com/agencynodex" target="_blank" rel="noopener">@agencynodex <svg class="ic"><use href="#i-insta"/></svg></a>
+          </div>
         </div>
       </div>
     </section>
