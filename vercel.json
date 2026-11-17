@@ -20,7 +20,18 @@
           "value": "guilherme-ferreira-two.vercel.app"
         }
       ],
-      "destination": "https://guilhermeferreira-vibecoder.vercel.app/$1",
+      "destination": "https://eoguilhermeferreira.vercel.app/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "guilhermeferreira-vibecoder.vercel.app"
+        }
+      ],
+      "destination": "https://eoguilhermeferreira.vercel.app/$1",
       "permanent": true
     }
   ]
