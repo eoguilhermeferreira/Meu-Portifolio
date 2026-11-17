@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guilherme Ferreira — Desenvolvedor Web</title>
+  <meta name="description" content="Guilherme Ferreira, desenvolvedor web e vibe coder de Avaré-SP. Crio sites, lojas virtuais e sistemas completos usando IA.">
+  <meta name="theme-color" content="#0B0B0B">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Guilherme Ferreira — Portfólio">
+  <meta property="og:description" content="Crio sites, lojas virtuais e sistemas completos usando IA. Transformo ideias em produtos digitais que funcionam de verdade.">
+  <meta property="og:image" content="https://guilherme-ferreira-two.vercel.app/assets/og.jpg">
+  <meta property="og:url" content="https://guilherme-ferreira-two.vercel.app/">
+  <link rel="canonical" href="https://guilherme-ferreira-two.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/guilherme.webp" type="image/webp">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Ícones (traço fino) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10Z" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-site" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01M7 13h6M7 16h10"/></symbol>
+      <symbol id="i-shop" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></symbol>
+      <symbol id="i-system" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></symbol>
+      <symbol id="i-ai" viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 10.5h4M10 13.5h2.5"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+      <symbol id="i-plan" viewBox="0 0 24 24"><path d="M9 4h6M9 4a2 2 0 0 0-2 2H5v15h14V6h-2a2 2 0 0 0-2-2"/><path d="M8.5 12l2 2 4-4M8.5 17.5h7"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+      <symbol id="i-tune" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4 18-7Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="topbar" id="topo">
+    <a href="#inicio" class="brand" aria-label="Guilherme Ferreira — início">GF<span>.</span></a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="hero-meta">
+        <p class="meta-left">Desenvolvedor web<br>Avaré — SP</p>
+        <p class="badge"><span class="dot"></span>Disponível para trabalho remoto<svg class="ic star"><use href="#i-star"/></svg></p>
+      </div>
+
+      <h1 class="hero-word" aria-label="Portfólio de Guilherme Ferreira"><span class="fit" aria-hidden="true">PORTFÓLIO</span></h1>
+
+      <figure class="hero-photo">
+        <picture>
+          <source srcset="/assets/guilherme.webp" type="image/webp">
+          <img src="/assets/guilherme.png" alt="Foto de Guilherme Ferreira" width="928" height="1103" fetchpriority="high">
+        </picture>
+      </figure>
+
+      <div class="hero-intro">
+        <p class="hello">Olá, eu sou</p>
+        <h2 class="hero-name">Guilherme<br>Ferreira</h2>
+        <p class="hero-role">Desenvolvedor web &amp; vibe coder</p>
+        <p class="hero-text">Crio sites, lojas virtuais e sistemas completos usando IA. Transformo ideias em produtos digitais que funcionam de verdade.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#projetos">Ver projetos <svg class="ic"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="https://wa.me/5514988044153" target="_blank" rel="noopener">Falar no WhatsApp <svg class="ic"><use href="#i-whats"/></svg></a>
+        </div>
+      </div>
+
+      <ul class="hero-stats" aria-label="Números">
+        <li><strong>9</strong><span>projetos<br>no ar</span></li>
+        <li><strong>7</strong><span>clientes<br>atendidos</span></li>
+        <li><strong>100%</strong><span>trabalho<br>remoto</span></li>
+      </ul>
+    </section>
+
+    <!-- ================= O QUE EU FAÇO ================= -->
+    <section class="section" id="servicos">
+      <div class="section-head reveal">
+        <h2 class="title">O que eu faço</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="services">
+        <article class="service reveal">
+          <span class="service-n">01</span>
+          <svg class="ic-lg"><use href="#i-site"/></svg>
+          <h3>Sites</h3>
+          <p>Sites institucionais modernos e rápidos.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service-n">02</span>
+          <svg class="ic-lg"><use href="#i-shop"/></svg>
+          <h3>Lojas virtuais</h3>
+          <p>E-commerce completo com pagamento.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service-n">03</span>
+          <svg class="ic-lg"><use href="#i-system"/></svg>
+          <h3>Sistemas web</h3>
+          <p>Pedidos, estoque, gestão e painéis.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service-n">04</span>
+          <svg class="ic-lg"><use href="#i-ai"/></svg>
+          <h3>Automações e IA</h3>
+          <p>Chatbots, integrações e automações.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= PROJETOS ================= -->
+    <section class="section" id="projetos">
+      <div class="section-head reveal">
+        <h2 class="title">Projetos em destaque</h2>
+        <span class="rule"></span>
+        <span class="head-note">9 projetos no ar</span>
+      </div>
+
+      <div class="projects">
+        <a class="project reveal" href="https://foodnex-app.vercel.app" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Sistema</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/foodnex.webp" alt="Tela inicial do projeto FoodNex" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">01</span>
+            <div><h3>FoodNex</h3><p>Sistema de pedidos e cardápio digital para restaurantes.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="project reveal" href="https://pousadacabanaavare.com.br" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Site + sistema</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/pousada.webp" alt="Tela inicial do projeto Pousada Cabana" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">02</span>
+            <div><h3>Pousada Cabana</h3><p>Site e sistema de gestão.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="project reveal" href="https://www.cardapiozacota.com.br" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Cardápio digital</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/zacota-cardapio.webp" alt="Tela inicial do projeto Restaurante Zacota" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">03</span>
+            <div><h3>Restaurante Zacota</h3><p>Cardápio digital.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="project reveal" href="https://www.restaurantezacota.com.br" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Site</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/zacota-site.webp" alt="Tela inicial do projeto Restaurante Zacota" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">04</span>
+            <div><h3>Restaurante Zacota</h3><p>Site.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="project reveal" href="https://advocacia-joao-silvestre.vercel.app" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Site institucional</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/advocacia.webp" alt="Tela inicial do projeto Advocacia João Silvestre" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">05</span>
+            <div><h3>Advocacia João Silvestre</h3><p>Site institucional.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="project reveal" href="https://www.lojasantafeavare.com.br" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Loja virtual</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/santafe.webp" alt="Tela inicial do projeto Loja Santa Fé Avaré" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">06</span>
+            <div><h3>Loja Santa Fé Avaré</h3><p>Loja virtual.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="project reveal" href="https://www.brubellysboutiqueinfantil.com.br" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Loja virtual</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/brubellys.webp" alt="Tela inicial do projeto Brubellys Boutique Infantil" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">07</span>
+            <div><h3>Brubellys Boutique Infantil</h3><p>Loja virtual.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="project reveal" href="https://www.caramelladakidsavare.com.br" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Loja virtual</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/caramellada.webp" alt="Tela inicial do projeto Caramellada Kids Avaré" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">08</span>
+            <div><h3>Caramellada Kids Avaré</h3><p>Loja virtual.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="project reveal" href="https://www.mfimportsavare.com.br" target="_blank" rel="noopener">
+          <div class="preview"><span class="preview-tag">Loja virtual</span><div class="laptop"><div class="laptop-screen"><img src="/assets/projetos/mfimports.webp" alt="Tela inicial do projeto MF Imports Avaré" width="960" height="600" loading="lazy" decoding="async"></div><div class="laptop-base"></div></div></div>
+          <div class="project-info">
+            <span class="project-n">09</span>
+            <div><h3>MF Imports Avaré</h3><p>Loja virtual.</p></div>
+          </div>
+          <span class="project-link">Ver projeto <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+
+      <div class="own reveal">
+        <p class="own-label"><svg class="ic star"><use href="#i-star"/></svg>Projetos próprios</p>
+        <div class="own-grid">
+          <article class="own-card">
+            <span class="own-name">ChatNex</span>
+            <p>Chatbot com IA integrado ao WhatsApp.</p>
+          </article>
+          <article class="own-card">
+            <span class="own-name">Zack Finance <small>Em testes</small></span>
+            <p>App de controle financeiro pessoal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESSO + FERRAMENTAS ================= -->
+    <section class="section split" id="processo">
+      <div class="process-col">
+        <div class="section-head reveal">
+          <h2 class="title">Meu processo</h2>
+          <span class="rule"></span>
+        </div>
+        <ol class="process">
+          <li class="reveal"><span class="step-n">01</span><span class="step-ic"><svg class="ic"><use href="#i-search"/></svg></span><div><h3>Entender</h3><p>Conversa com o cliente para entender a necessidade.</p></div></li>
+          <li class="reveal"><span class="step-n">02</span><span class="step-ic"><svg class="ic"><use href="#i-plan"/></svg></span><div><h3>Planejar</h3><p>Definir páginas, funções e visual.</p></div></li>
+          <li class="reveal"><span class="step-n">03</span><span class="step-ic"><svg class="ic"><use href="#i-code"/></svg></span><div><h3>Criar</h3><p>Desenvolvimento com IA (Claude Code).</p></div></li>
+          <li class="reveal"><span class="step-n">04</span><span class="step-ic"><svg class="ic"><use href="#i-tune"/></svg></span><div><h3>Ajustar</h3><p>Testes e ajustes junto com o cliente.</p></div></li>
+          <li class="reveal"><span class="step-n">05</span><span class="step-ic"><svg class="ic"><use href="#i-send"/></svg></span><div><h3>Publicar</h3><p>Site no ar, rápido e funcionando.</p></div></li>
+        </ol>
+      </div>
+
+      <div class="tools-col" id="ferramentas">
+        <div class="section-head reveal">
+          <h2 class="title">Ferramentas</h2>
+          <span class="rule"></span>
+        </div>
+        <ul class="tags reveal">
+          <li>Claude</li><li>Claude Code</li><li>Lovable</li><li>Supabase</li><li>Vercel</li><li>GitHub</li><li>Mercado Pago</li><li>Evolution API</li><li>Resend</li>
+        </ul>
+        <p class="tools-note reveal">IA para desenvolver, Supabase para os dados, Vercel para publicar e Mercado Pago para receber pagamentos. Mensagens e e-mails automáticos com Evolution API e Resend.</p>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="section" id="sobre">
+      <div class="about reveal">
+        <div class="about-photo">
+          <img src="/assets/sobre.webp" alt="Guilherme Ferreira" width="1200" height="1600" loading="lazy" decoding="async">
+        </div>
+        <div class="about-body">
+          <h2 class="title">Sobre mim</h2>
+          <span class="rule short"></span>
+          <p class="about-lead">Sou de Avaré-SP e fundador da agência <strong>NODEX</strong>.</p>
+          <p>Comecei no desenvolvimento com IA em junho de 2026 e, desde então, entreguei projetos reais para restaurantes, lojas, pousada e escritório de advocacia. Gosto de criar rápido, testar e transformar ideias em produtos que as pessoas usam.</p>
+          <ul class="about-facts">
+            <li><svg class="ic"><use href="#i-pin"/></svg>Avaré, SP — Brasil</li>
+            <li><svg class="ic"><use href="#i-star"/></svg>Fundador da NODEX</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="section contact" id="contato">
+      <div class="contact-head reveal">
+        <h2 class="contact-title">Vamos trabalhar<br>juntos<svg class="ic star"><use href="#i-star"/></svg></h2>
+        <p>Tem um projeto em mente? Me chama no WhatsApp e a gente conversa sobre a sua ideia.</p>
+        <a class="btn btn-solid" href="https://wa.me/5514988044153" target="_blank" rel="noopener">Falar no WhatsApp <svg class="ic"><use href="#i-whats"/></svg></a>
+      </div>
+      <ul class="contact-list reveal">
+        <li><a href="mailto:guilhermeee.hferreiraa@gmail.com"><span class="c-ic"><svg class="ic"><use href="#i-mail"/></svg></span><span class="c-label">E-mail</span><span class="c-val">guilhermeee.hferreiraa@gmail.com</span></a></li>
+        <li><a href="https://wa.me/5514988044153" target="_blank" rel="noopener"><span class="c-ic"><svg class="ic"><use href="#i-phone"/></svg></span><span class="c-label">WhatsApp</span><span class="c-val">(14) 98804-4153</span></a></li>
+        <li><a href="https://github.com/eoguilhermeferreira" target="_blank" rel="noopener"><span class="c-ic"><svg class="ic"><use href="#i-github"/></svg></span><span class="c-label">GitHub</span><span class="c-val">eoguilhermeferreira</span></a></li>
+        <li><a href="https://www.instagram.com/guiilherme.fferreira" target="_blank" rel="noopener"><span class="c-ic"><svg class="ic"><use href="#i-insta"/></svg></span><span class="c-label">Instagram</span><span class="c-val">@guiilherme.fferreira</span></a></li>
+        <li><div><span class="c-ic"><svg class="ic"><use href="#i-pin"/></svg></span><span class="c-label">Local</span><span class="c-val">Avaré, SP — Brasil</span></div></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Guilherme Ferreira</span>
+    <a href="#inicio">Voltar ao topo <svg class="ic"><use href="#i-arrow-up"/></svg></a>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5514988044153" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg>
+  </a>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
