@@ -100,6 +100,34 @@ ul, ol { list-style: none; }
 .nav a:hover { color: var(--off); }
 .nav a:hover::after { right: 0; }
 
+.menu-btn {
+  display: none;
+  width: 44px; height: 44px; place-items: center;
+  background: transparent; color: var(--off);
+  border: 1px solid var(--off); border-radius: 2px;
+  font-size: 22px; cursor: pointer;
+}
+.menu-mobile {
+  position: fixed; z-index: 49;
+  top: 0; left: 0; right: 0;
+  padding: 84px var(--gutter) 28px;
+  background: rgba(11, 11, 11, .96);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--wine);
+  display: flex; flex-direction: column;
+  transform: translateY(-12px); opacity: 0;
+  transition: transform .35s var(--ease), opacity .35s var(--ease);
+}
+.menu-mobile.open { transform: none; opacity: 1; }
+.menu-mobile a {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--f-display); font-size: 34px; line-height: 1.1; text-transform: uppercase;
+  color: var(--off);
+}
+.menu-mobile a span { font-size: 14px; color: var(--wine); letter-spacing: .1em; }
+
 /* ---------- Botões (sempre off-white) ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
@@ -345,8 +373,13 @@ ul, ol { list-style: none; }
 }
 
 /* Notebook (moldura em CSS com o print real do site) */
+.devices {
+  position: relative;
+  width: 84%;
+  margin-right: 7%;
+}
 .laptop {
-  width: 88%;
+  width: 100%;
   transition: transform .6s var(--ease);
   filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .6));
 }
@@ -389,30 +422,97 @@ ul, ol { list-style: none; }
 }
 .project-link .ic { transition: transform .35s var(--ease); }
 .project:hover { transform: translateY(-6px); border-color: var(--wine); box-shadow: 0 28px 50px -28px rgba(107, 30, 35, .9); }
-.project:hover .laptop { transform: translateY(-4px) scale(1.035); }
+.phone {
+  position: absolute; z-index: 2;
+  right: -9%; bottom: -3%;
+  width: 21%;
+  aspect-ratio: 360 / 613;
+  padding: 3px;
+  background: linear-gradient(160deg, #3a3436, #141213);
+  border: 1px solid #4a4244;
+  border-radius: 14px;
+  box-shadow: 0 16px 26px -8px rgba(0, 0, 0, .85), -6px 0 18px -6px rgba(0, 0, 0, .6);
+  transition: transform .6s var(--ease);
+}
+.phone img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top center;
+  border-radius: 11px;
+  background: #1a1718;
+}
+.project:hover .laptop { transform: translateY(-4px) scale(1.03); }
+.project:hover .phone { transform: translateY(-10px); }
 .project:hover .project-link .ic { transform: translateX(5px); }
 
-.own { margin-top: 48px; }
-.own-label {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gray);
-  margin-bottom: 16px;
+
+/* ---------- Produtos NODEX ---------- */
+.section-lead { color: var(--gray); max-width: 60ch; margin: -18px 0 32px; }
+.products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.product {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--line); border-radius: 4px; overflow: hidden;
+  background: linear-gradient(170deg, rgba(44, 15, 18, .9), rgba(44, 15, 18, .3));
+  transition: transform .45s var(--ease), border-color .45s, box-shadow .45s;
 }
-.own-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.own-card {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap;
-  padding: 20px 22px;
-  border: 1px dashed var(--line);
-  border-radius: 4px;
-  transition: border-color .4s, background .4s;
+.product:hover { transform: translateY(-6px); border-color: var(--wine); box-shadow: 0 28px 50px -28px rgba(107, 30, 35, .9); }
+.product-shot { position: relative; aspect-ratio: 16 / 7; overflow: hidden; border-bottom: 1px solid var(--line); background: #141213; }
+.product-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .8s var(--ease); }
+.product:hover .product-shot img { transform: scale(1.04); }
+.status {
+  position: absolute; top: 12px; left: 12px;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 10px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600;
+  padding: 5px 11px; border-radius: 100px;
+  background: rgba(11, 11, 11, .82); color: var(--off); border: 1px solid var(--line);
 }
-.own-card:hover { border-color: var(--wine); background: rgba(44, 15, 18, .45); }
-.own-name { font-family: var(--f-display); font-size: 26px; text-transform: uppercase; line-height: 1; display: inline-flex; align-items: center; gap: 12px; }
-.own-name small {
-  font-family: var(--f-body); font-size: 10px; letter-spacing: .18em; color: var(--gray);
-  border: 1px solid var(--line); border-radius: 100px; padding: 3px 9px;
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--off); animation: pulse 2.4s infinite; }
+.status-dev { color: var(--gray); border-style: dashed; }
+.status-dev .status-dot { background: var(--gray); animation: none; }
+.product-body { display: flex; flex-direction: column; flex: 1; padding: 22px 22px 24px; }
+.product-cat { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gray); }
+.product h3 { margin-top: 6px; font-family: var(--f-display); font-weight: 400; font-size: clamp(32px, 3vw, 42px); line-height: 1; text-transform: uppercase; }
+.product-desc { margin-top: 14px; color: var(--gray); font-size: 14.5px; line-height: 1.65; }
+.product-feats { margin: 18px 0 22px; display: grid; gap: 8px; }
+.product-feats li { position: relative; padding-left: 20px; font-size: 13.5px; color: var(--off); }
+.product-feats li::before { content: ""; position: absolute; left: 0; top: .6em; width: 10px; height: 1px; background: var(--wine); box-shadow: 0 0 0 .5px var(--wine); }
+.product-link {
+  margin-top: auto; align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 44px; padding: 0 18px;
+  font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  background: var(--off); color: var(--black); border: 1px solid var(--off); border-radius: 2px;
+  transition: transform .3s var(--ease), box-shadow .3s;
 }
-.own-card p { font-size: 14px; color: var(--gray); }
+.product-link:hover { transform: translateY(-2px); box-shadow: 0 12px 30px -12px rgba(245, 242, 237, .55); }
+.product-link.is-off { background: transparent; color: var(--gray); border: 1px dashed var(--gray); cursor: default; }
+.product-link.is-off:hover { transform: none; box-shadow: none; }
+
+/* ---------- Agência NODEX ---------- */
+.agency {
+  display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  border: 1px solid var(--line); border-radius: 4px; overflow: hidden;
+  background: linear-gradient(135deg, var(--wine-dark), rgba(44, 15, 18, .3));
+}
+.agency-logo {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  min-height: 380px; padding: 40px 24px;
+  border-right: 1px solid var(--line);
+  background: radial-gradient(ellipse 70% 60% at 50% 45%, rgba(107, 30, 35, .55), transparent 70%), var(--black);
+  overflow: hidden;
+}
+.agency-logo img { width: min(70%, 320px); height: auto; }
+.agency-wordmark {
+  font-family: var(--f-display); font-size: clamp(72px, 10vw, 150px); line-height: .9; letter-spacing: .02em;
+  background: linear-gradient(180deg, var(--off) 35%, var(--gray) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.agency-sub { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gray); text-align: center; }
+.agency-body { padding: clamp(32px, 5vw, 64px); align-self: center; }
+.agency-kicker { display: flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gray); margin-bottom: 12px; }
+.agency-body .title { white-space: normal; }
+.agency-lead { font-size: clamp(20px, 2vw, 26px); font-weight: 300; color: var(--off); line-height: 1.4; margin-bottom: 14px; }
+.agency-body p:not(.agency-lead):not(.agency-kicker) { color: var(--gray); line-height: 1.75; max-width: 58ch; }
+.agency-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
 /* ---------- Processo + Ferramentas ---------- */
 .split {
@@ -468,7 +568,7 @@ ul, ol { list-style: none; }
 .about-photo {
   position: relative;
   border-right: 1px solid var(--line);
-  min-height: 520px;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: var(--wine-dark);
 }
@@ -512,7 +612,7 @@ ul, ol { list-style: none; }
 .contact-list li { border-bottom: 1px solid var(--line); }
 .contact-list li:first-child { border-top: 1px solid var(--line); }
 .contact-list a, .contact-list li > div {
-  display: grid; grid-template-columns: 44px 100px minmax(0, 1fr); align-items: center; gap: 14px;
+  display: grid; grid-template-columns: 44px 170px minmax(0, 1fr); align-items: center; gap: 14px;
   padding: 16px 4px;
   transition: background .3s, padding .3s var(--ease);
 }
@@ -570,9 +670,12 @@ ul, ol { list-style: none; }
    RESPONSIVO
    ========================================================= */
 @media (max-width: 1100px) {
+  .products { grid-template-columns: 1fr; }
+  .product-shot { aspect-ratio: 16 / 6.2; }
   .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav { display: none; }
+  .menu-btn { display: grid; }
 }
 
 @media (max-width: 1024px) {
@@ -620,13 +723,26 @@ ul, ol { list-style: none; }
   .hero-stats strong { font-size: 40px; min-width: 0; }
   .hero-stats span { font-size: 10px; letter-spacing: .14em; }
 
-  .about { grid-template-columns: 1fr; }
-  .about-photo { min-height: 0; aspect-ratio: 4 / 5; border-right: 0; border-bottom: 1px solid var(--line); }
-  .about-photo::after { background: linear-gradient(180deg, transparent 70%, rgba(44, 15, 18, .7)); }
+  .about { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+  .about-body { padding: 28px 24px; }
 }
 
 @media (max-width: 640px) {
-  .services, .projects, .own-grid { grid-template-columns: 1fr; }
+  .product-shot { aspect-ratio: 16 / 8; }
+  .agency { grid-template-columns: 1fr; }
+  .agency-logo { min-height: 220px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .agency-actions .btn { flex: 1 1 220px; }
+  .projects { grid-template-columns: 1fr; }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .service { padding: 20px 16px 22px; }
+  .service .ic-lg { width: 32px; height: 32px; }
+  .service-n { top: 16px; right: 14px; font-size: 12px; }
+  .service h3 { margin-top: 18px; font-size: 20px; }
+  .service p { font-size: 13px; }
+  .about { grid-template-columns: 1fr; }
+  .about-photo { border-right: 0; border-bottom: 1px solid var(--line); }
+  .about-photo::after { background: linear-gradient(180deg, transparent 75%, rgba(44, 15, 18, .7)); }
+  .about-body { padding: 32px 22px; }
   .section-head { gap: 14px; }
   .head-note { display: none; }
   .title { white-space: normal; }
